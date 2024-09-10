@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtvyc5buxfikf"]
+
+[ext_resource type="PackedScene" uid="uid://8082g8boq14s" path="res://player.tscn" id="1_0dskv"]
+[ext_resource type="Script" path="res://player2.gd" id="2_7f8j3"]
+[ext_resource type="PackedScene" uid="uid://bjtsvpu6saygs" path="res://ball.tscn" id="3_ns3na"]
+[ext_resource type="PackedScene" uid="uid://dopwet6frwtgn" path="res://scores.tscn" id="4_v5ci7"]
+
+[node name="mainscene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0dskv")]
+
+[node name="Player2" parent="." instance=ExtResource("1_0dskv")]
+position = Vector2(1211, 651)
+script = ExtResource("2_7f8j3")
+
+[node name="Node2D" parent="." instance=ExtResource("3_ns3na")]
+position = Vector2(224, 70)
+
+[node name="scores" parent="." instance=ExtResource("4_v5ci7")]
+offset_left = 39.0
+offset_right = 39.0
+
+[connection signal="draw" from="Node2D" to="Node2D" method="_on_draw"]

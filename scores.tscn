@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dopwet6frwtgn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8hhtt"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqo0g"]
+font_size = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="player1score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 58.0
+offset_right = 577.0
+offset_bottom = 127.0
+text = "00"
+label_settings = SubResource("LabelSettings_8hhtt")
+
+[node name="player2score" type="Label" parent="."]
+offset_left = 689.0
+offset_top = 58.0
+offset_right = 747.0
+offset_bottom = 127.0
+text = "00"
+label_settings = SubResource("LabelSettings_mqo0g")
