@@ -1,4 +1,5 @@
 extends Area2D
+@export var original_speed = 400
 var speed = 400  # Pixels per second
 var velocity = Vector2.ZERO
 var screen_size
@@ -21,9 +22,12 @@ func update_score_label():
 
 func _on_area_entered(_area):
 	# Handle collision with other areas
-	velocity.x *= -1
+	speed += 50
+	velocity = Vector2(velocity.x * -1, randf_range(screen_size.y*-1/2, screen_size.y/2)).normalized() * speed 
+	print(velocity)
 
 func reset_ball():
+	speed = original_speed
 	new_direction()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

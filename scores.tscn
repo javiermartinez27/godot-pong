@@ -24,6 +24,7 @@ text = "00"
 label_settings = SubResource("LabelSettings_8hhtt")
 
 [node name="player2score" type="Label" parent="."]
+layout_mode = 0
 offset_left = 689.0
 offset_top = 58.0
 offset_right = 747.0

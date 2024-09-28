@@ -8,9 +8,10 @@
 [node name="mainscene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_0dskv")]
+position = Vector2(1211, 160)
 
 [node name="Player2" parent="." instance=ExtResource("1_0dskv")]
-position = Vector2(1211, 651)
+position = Vector2(59, 651)
 script = ExtResource("2_7f8j3")
 
 [node name="Node2D" parent="." instance=ExtResource("3_ns3na")]
